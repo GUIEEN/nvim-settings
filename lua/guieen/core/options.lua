@@ -28,14 +28,14 @@ opt.cursorline = true
 opt.termguicolors = true -- color scheme can work like iterm2
 opt.background = "dark"
 opt.signcolumn = "yes"
- 
+
 -- backspace
 opt.backspace = "indent,eol,start" -- makes backspace key work properly
 
 -- clipboard
--- force neovim to use the system clipboard when you paste 
+-- force neovim to use the system clipboard when you paste
 -- anything with the yank/delete/etc operator
-opt.clipboard:append("unnamedplus") 
+opt.clipboard:append("unnamedplus")
 
 -- split windows
 opt.splitright = true
