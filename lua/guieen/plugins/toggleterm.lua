@@ -13,7 +13,7 @@ toggleterm.setup({
 		end
 	end,
 	-- open_mapping = [[<leader>tt]],
-	open_mapping = [[<C-`>]],
+	-- open_mapping = [[<C-`>]], -- set at the keymaps.lua
 	-- open_mapping = false,
 })
 

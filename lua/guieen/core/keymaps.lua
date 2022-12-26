@@ -59,3 +59,9 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 -- list available help tags
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- ###############################
+-- ###### toggleterm
+-- ###############################
+keymap.set("n", "<leader>ttt", ":ToggleTerm<CR>")
+keymap.set("n", "<leader>ttv", ":ToggleTerm direction=vertical<CR>")
