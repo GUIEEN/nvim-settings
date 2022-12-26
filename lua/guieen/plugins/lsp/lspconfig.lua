@@ -23,6 +23,9 @@ local on_attach = function(client, bufnr)
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
+	-- default shortcut
+	-- <c-o> : move prev page
+	-- <c-i> : move next page
 	-- set keybinds
 	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
@@ -108,4 +111,10 @@ lspconfig["sumneko_lua"].setup({
 			},
 		},
 	},
+})
+
+-- configure c & cpp server
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
