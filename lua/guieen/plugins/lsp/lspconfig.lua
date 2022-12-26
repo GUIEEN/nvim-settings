@@ -114,6 +114,11 @@ lspconfig["sumneko_lua"].setup({
 })
 
 -- configure c & cpp server
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- warning: multiple different client offset_encodings detected for buffer, this is not supported yet
+-- offsetEncoding should be changed to "utf-8"
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+capabilities.offsetEncoding = "utf-8"
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,

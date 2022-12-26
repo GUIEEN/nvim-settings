@@ -12,6 +12,7 @@ local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 -- configure null_ls
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 null_ls.setup({
 	-- setup formatters & linters
 	sources = {
@@ -25,6 +26,7 @@ null_ls.setup({
 				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
 			end,
 		}),
+		formatting.clang_format,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

@@ -131,4 +131,7 @@ return packer.startup(function(use)
 			require("toggleterm").setup()
 		end,
 	})
+
+	-- clang formatter
+	use("rhysd/vim-clang-format")
 end)
