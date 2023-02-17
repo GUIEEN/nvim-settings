@@ -43,7 +43,10 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 -- ###############################
 -- ###### nvim-tree
 -- ###############################
-keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>bb", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>bf", ":NvimTreeFindFile<CR>")
+keymap.set("n", "<leader>b+", ":NvimTreeResize +5<CR>")
+keymap.set("n", "<leader>b-", ":NvimTreeResize -5<CR>")
 
 -- ###############################
 -- ###### telescope
@@ -52,11 +55,11 @@ keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>")
 -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 -- find string in current working directory as you type
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
+keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>") -- find global
 -- find string under cursor in current working directory
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
+keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find here
 -- list open buffers in current neovim instance
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- find buffer
 -- list available help tags
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
