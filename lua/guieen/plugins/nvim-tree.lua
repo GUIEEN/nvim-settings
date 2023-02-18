@@ -11,7 +11,22 @@ vim.g.loaded_netrwPlugin = 1
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 nvimtree.setup({
-	git = { enable = true },
+	filters = {
+		dotfiles = false,
+		-- Custom list of vim regex for file/directory names that will not be shown
+		custom = {
+			"^\\.git",
+		},
+		-- List of dir/files to exclude from filtering: always show them
+		exclude = {
+			".gitignore",
+		},
+	},
+	git = {
+		enable = true,
+		-- Ignore files based on `.gitignore`. Requires |git.enable| `= true`
+		ignore = false,
+	},
 	-- change folder arrow icons
 	renderer = {
 		highlight_git = true,
@@ -20,6 +35,9 @@ nvimtree.setup({
 				folder = {
 					arrow_closed = "", -- arrow when folder is closed
 					arrow_open = "", -- arrow when folder is open
+				},
+				git = {
+					-- ignored = "",
 				},
 			},
 			show = {
