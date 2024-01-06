@@ -14,6 +14,7 @@ require("guieen.plugins.lsp.lspconfig")
 require("guieen.plugins.lsp.lspsaga")
 require("guieen.plugins.lsp.null-ls")
 require("guieen.plugins.autopairs")
+require("nvim-treesitter.install").compilers = { "gcc" }
 require("guieen.plugins.treesitter")
 require("guieen.plugins.gitsigns")
 require("guieen.plugins.toggleterm")
