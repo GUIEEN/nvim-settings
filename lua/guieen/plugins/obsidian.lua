@@ -35,6 +35,8 @@ local opts = {
     use_path_only = false,
   },
 
+  disable_frontmatter = true,
+
   daily_notes = {
     folder = "001-Journal/DailyReport/Daily/",
     date_format = "%Y-%m-%d_%a",
@@ -87,8 +89,8 @@ return {
     -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
     -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
     "BufReadPre "
-    .. vim.fn.expand("~")
-    .. "/Documents/obsidian/obsidian/**.md",
+      .. vim.fn.expand("~")
+      .. "/Documents/obsidian/obsidian/**.md",
     "BufNewFile " .. vim.fn.expand("~") .. "/Documents/obsidian/obsidian/**.md",
   },
   dependencies = {
